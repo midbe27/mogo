@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
       href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -14,17 +15,17 @@
 <body>
 
 <!-- Header -->
-<header class="header">
+<header class="header " id="header">
   <div class="container">
     <div class="header_inner">
-      <div class="header_logo">MoGo</div>
+      <div class="header_logo" data-scroll="#intro">MoGo</div>
 
-      <nav class="nav">
-        <a class="nav_link active" href="#">About</a>
-        <a class="nav_link" href="#">Service</a>
-        <a class="nav_link" href="#">Work</a>
-        <a class="nav_link" href="#">Blog</a>
-        <a class="nav_link" href="#">Contact</a>
+      <nav class="nav" id="nav">
+        <a class="nav_link" href="#" data-scroll="#about">About</a>
+        <a class="nav_link" href="#" data-scroll="#services">Service</a>
+        <a class="nav_link" href="#" data-scroll="#works">Work</a>
+        <a class="nav_link" href="#" data-scroll="#blog">Blog</a>
+        <a class="nav_link" href="#" data-scroll="#footer">Contact</a>
         <a class="nav_link" href="#">
           <i class="fas fa-shopping-cart"></i>
         </a>
@@ -33,24 +34,24 @@
         </a>
       </nav>
 
-      <button class="nav-toggle" type="button">
+      <button class="nav-toggle" id="nav-toggle" type="button">
         <span class="nav_toggle_item">Menu</span>
       </button>
-    </div><!-- ,,,,,/.header_inner -->
+    </div><!-- /.header_inner -->
   </div><!-- /.container -->
 </header>
 
 <div class="page">
 
   <!-- Content -->
-  <div class="intro">
+  <div class="intro" id="intro">
     <div class="container">
 
       <div class="intro_inner">
         <h2 class="intro_suptitle">Creative Template</h2>
         <h1 class="intro_title">Welcome to MoGo</h1>
 
-        <a class="btn" href="#">Learn More</a>
+        <a class="btn" href="#" >Learn More</a>
       </div><!-- /.intro_inner -->
 
       <div class="slider">
@@ -81,7 +82,8 @@
     </div><!-- /.container -->
   </div><!-- /.intro -->
 
-  <section class="section">
+  <!-- About -->
+  <section class="section" id="about">
     <div class="container">
 
       <div class="section_header">
@@ -89,7 +91,8 @@
         <h2 class="section_title">Story About Us</h2>
         <div class="section_text">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore
             et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
             utaliquip ex ea commodo consequat.
           </p>
@@ -139,7 +142,7 @@
     </div><!-- container -->
   </section>
 
-
+  <!-- Statistics -->
   <div class="statistics">
     <div class="container">
 
@@ -176,8 +179,8 @@
     </div><!-- /.container -->
   </div><!-- /.statistics -->
 
-
-  <section class="section">
+  <!-- Services -->
+  <section class="section" id="services">
     <div class="container">
 
       <div class="section_header">
@@ -245,6 +248,7 @@
     </div><!-- /.container -->
   </section>
 
+  <!-- Devices -->
   <section class="section section--device">
     <div class="container">
 
@@ -261,7 +265,7 @@
     </div><!-- /.container -->
   </section>
 
-
+  <!-- We do -->
   <section class="section">
     <div class="container">
 
@@ -286,18 +290,20 @@
 
           <div class="accordion">
 
-            <div class="accordion_item">
+            <div class="accordion_item" data-collapse="#wedo-1">
               <div class="accordion_header">
                 <img class="accordion_icon" src="assets/img/wedo/photography.png" alt="">
                 <div class="accordion_title">Photography</div>
               </div>
 
-              <div class="accordion_content">
+              <div class="accordion_content" id="wedo-1">
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure
+                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                  pariatur.
                   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                   mollit anim id est laborum.
                 </p>
@@ -305,18 +311,20 @@
 
             </div>
 
-            <div class="accordion_item active">
+            <div class="accordion_item active" data-collapse="#wedo-2">
               <div class="accordion_header">
                 <img class="accordion_icon" src="assets/img/wedo/creative.png" alt="">
                 <div class="accordion_title">creativity</div>
               </div>
 
-              <div class="accordion_content">
+              <div class="accordion_content" id="wedo-2">
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure
+                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                  pariatur.
                   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                   mollit anim id est laborum.
                 </p>
@@ -324,18 +332,20 @@
 
             </div>
 
-            <div class="accordion_item">
+            <div class="accordion_item" data-collapse="#wedo-3">
               <div class="accordion_header">
                 <img class="accordion_icon" src="assets/img/wedo/web_desing.png" alt="">
                 <div class="accordion_title">web design</div>
               </div>
 
-              <div class="accordion_content">
+              <div class="accordion_content" id="wedo-3">
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure
+                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                  pariatur.
                   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                   mollit anim id est laborum.
                 </p>
@@ -350,28 +360,48 @@
     </div><!-- /.container -->
   </section>
 
+  <!-- Reviews 1 -->
   <div class="section section--gray">
     <div class="container">
 
       <div class="reviews">
-        <a class="reviews_btn reviews_btn--prev" href=""></a>
-        <a class="reviews_btn reviews_btn--next" href=""></a>
+        <!--<a class="reviews_btn reviews_btn&#45;&#45;prev" href=""></a>
+        <a class="reviews_btn reviews_btn&#45;&#45;next" href=""></a>-->
 
-        <div class="reviews_item">
-          <img class="reviews_photo" src="assets/img/reviews/reviews_default.png" alt="">
-          <div class="reviews_text">
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+        <div data-slider>
+
+          <div>
+            <div class="reviews_item">
+              <img class="reviews_photo" src="assets/img/reviews/reviews_default.png" alt="">
+              <div class="reviews_text">
+                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+              </div>
+              <div class="reviews_author">Jon Doe</div>
+            </div>
           </div>
-          <div class="reviews_author">Jon Doe</div>
-        </div>
+
+          <div>
+            <div class="reviews_item">
+              <img class="reviews_photo" src="assets/img/reviews/reviews_default.png" alt="">
+              <div class="reviews_text">
+                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+              </div>
+              <div class="reviews_author">Jon Doe</div>
+            </div>
+          </div>
+
+        </div><!-- / data-slide -->
 
       </div><!-- reviews -->
 
     </div><!-- /.container -->
   </div><!-- /.section -->
 
-
+  <!-- Team -->
   <section class="section">
     <div class="container">
 
@@ -481,6 +511,7 @@
     </div><!-- /.container -->
   </section>
 
+  <!-- Logos -->
   <div class="section section--gray">
     <div class="container">
 
@@ -508,7 +539,8 @@
     </div><!-- /.container -->
   </div>
 
-  <section class="section">
+  <!-- Works -->
+  <section class="section" id="works">
     <div class="container">
       <div class="section_header">
         <h3 class="section_suptitle">What we do</h3>
@@ -599,27 +631,46 @@
     </div>
   </section>
 
+  <!-- Reviews 2 -->
   <div class="section">
     <div class="container">
 
       <div class="reviews">
-        <a class="reviews_btn reviews_btn--prev" href=""></a>
-        <a class="reviews_btn reviews_btn--next" href=""></a>
 
-        <div class="reviews_item reviews_item--avatar">
-          <img class="reviews_photo" src="assets/img/avatar.jpg" alt="">
-          <div class="reviews_text">
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+        <div data-slider>
+
+          <div>
+            <div class="reviews_item reviews_item--avatar">
+              <img class="reviews_photo" src="assets/img/avatar.jpg" alt="">
+              <div class="reviews_text">
+                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+              </div>
+              <div class="reviews_author">Jon Doe</div>
+            </div>
           </div>
-          <div class="reviews_author">Jon Doe</div>
-        </div>
+
+          <div>
+            <div class="reviews_item reviews_item--avatar">
+              <img class="reviews_photo" src="assets/img/avatar.jpg" alt="">
+              <div class="reviews_text">
+                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+              </div>
+              <div class="reviews_author">Jon Doe</div>
+            </div>
+          </div>
+
+        </div><!-- / data-slider -->
 
       </div><!-- reviews -->
 
     </div><!-- /.container -->
   </div><!-- /.section -->
 
+  <!-- Clients -->
   <section class="section section--client">
     <div class="container">
 
@@ -648,7 +699,8 @@
             <div class="clients_name">Nick Karvounis</div>
             <div class="clients_prof">Graphic Design</div>
             <div class="clients_text">
-              Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
               Ut
               enim ad minim veniam
             </div>
@@ -661,7 +713,8 @@
             <div class="clients_name">Jaelynn Castillo</div>
             <div class="clients_prof">Graphic Design</div>
             <div class="clients_text">
-              Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore
               magna aliqua. Ut enim ad minim veniam
             </div>
           </div><!-- /.clients_content -->
@@ -673,7 +726,8 @@
             <div class="clients_name">Mike Petrucci</div>
             <div class="clients_prof">Graphic Design</div>
             <div class="clients_text">
-              Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna
               aliqua. Ut enim ad minim.
             </div>
           </div><!-- /.clients_content -->
@@ -684,7 +738,8 @@
     </div><!-- /.container -->
   </section>
 
-  <section class="section">
+  <!-- BLog -->
+  <section class="section" id="blog">
     <div class="container">
 
       <div class="section_header">
@@ -807,6 +862,7 @@
     </div>
   </section>
 
+  <!-- Map -->
   <section class="section section--map">
     <div class="container">
       <div class="map">
@@ -818,7 +874,8 @@
     </div>
   </section>
 
-  <footer class="footer">
+  <!-- Footer -->
+  <footer class="footer" id="footer">
     <div class="container">
 
       <div class="footer_inner">
@@ -826,11 +883,14 @@
         <div class="footer_col footer_col--first">
           <div class="footer_logo">MoGo</div>
           <div class="footer_text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et
             dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea
             commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat nulla
             pariatur.
           </div>
 
@@ -951,7 +1011,11 @@
     </div>
   </footer>
 
-</div>
+</div><!-- /.page -->
 
+<!--<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>-->
+<script src="assets/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="assets/js/app.js"></script>
 </body>
 </html>
